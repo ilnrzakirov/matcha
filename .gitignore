@@ -1,0 +1,10 @@
+.idea
+.env
+__pycache__/
+*.spec
+pip-log.txt
+db.sqlite3
+*.log
+instance/
+.webassets-cache
+.venv
