@@ -7,7 +7,7 @@ LOGGING_CONFIG = {
         "console": {
             "format": "%(asctime)s | %(levelname)s | %(module)s|%(lineno)s | %(message)s",
         },
-        "file": "%(asctime)s | [%(levelname)s] | %(name)s | %(module)s|%(lineno)s | %(message)s"
+        "file": "%(asctime)s | [%(levelname)s] | %(name)s | %(module)s|%(lineno)s | %(message)s",
     },
     "handlers": {
         "console": {
