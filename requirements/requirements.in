@@ -1,0 +1,4 @@
+fastapi==0.88.0
+alembic==1.9.1
+databases==0.7.0
+SQLAlchemy==1.4.45
