@@ -1,10 +1,11 @@
-from fastapi import FastAPI
+import logging
 
-from config import config
+from fastapi import FastAPI
 
 app = FastAPI()
 
 
 @app.on_event("startup")
 async def startup():
-    print(config)
+    console_log = logging.getLogger("console")
+    console_log.info("Сервис запущен")
