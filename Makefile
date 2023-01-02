@@ -1,5 +1,5 @@
 run:
-	uvicorn main:app --reload
+	python3 run.py
 
 makemigrations:
 	alembic revision --m="$(NAME)" --autogenerate
