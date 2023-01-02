@@ -6,7 +6,7 @@ from pydantic import (
 
 class PostgresSettings(BaseModel):
     host: str
-    port: str
+    port: int
     database: str
     password: str
     user: str
@@ -14,7 +14,7 @@ class PostgresSettings(BaseModel):
 
 class UvicornSettings(BaseModel):
     host: str
-    port: str
+    port: int
 
 
 class Configuration(BaseSettings):
