@@ -17,9 +17,14 @@ class UvicornSettings(BaseModel):
     port: int
 
 
+class JWTSettings(BaseModel):
+    key: str
+
+
 class Configuration(BaseSettings):
     postgres: PostgresSettings
     uvicorn: UvicornSettings
+    jwt: JWTSettings
 
     class Config:
         env_file = ".env",
