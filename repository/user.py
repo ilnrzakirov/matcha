@@ -20,6 +20,7 @@ from db.models.user import (
 )
 
 SECRET = config.user_manager.key
+logger = logging.getLogger("console")
 
 
 class UserManager(IntegerIDMixin, BaseUserManager[User, int]):
@@ -27,7 +28,7 @@ class UserManager(IntegerIDMixin, BaseUserManager[User, int]):
     verification_token_secret = SECRET
 
     async def on_after_register(self, user: User, request: Optional[Request] = None):
-        logging.info(f"Пользователь {user.username} зарегистрирован")
+        logger.info(f"Пользователь {user.username} зарегистрирован")
 
     async def create(
         self,
