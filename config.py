@@ -21,10 +21,15 @@ class JWTSettings(BaseModel):
     key: str
 
 
+class UserManager(BaseModel):
+    key: str
+
+
 class Configuration(BaseSettings):
     postgres: PostgresSettings
     uvicorn: UvicornSettings
     jwt: JWTSettings
+    user_manager: UserManager
 
     class Config:
         env_file = ".env",
