@@ -37,6 +37,7 @@ app.include_router(
     tags=["auth"],
 )
 
+
 app.include_router(
     fastapi_users.get_register_router(UserRead, UserCreate),
     prefix="/auth",
