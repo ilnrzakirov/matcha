@@ -4,6 +4,7 @@ from fastapi import FastAPI
 from fastapi_users import FastAPIUsers
 
 from auth.auth import auth_backend
+from db.engine import database
 from db.models.user import User
 from repository.user import get_user_manager
 from repository.user_schemas import (
@@ -23,11 +24,13 @@ fastapi_users = FastAPIUsers[User, int](
 
 @app.on_event("startup")
 async def startup():
+    database.connect()
     console_log.info("Сервис запущен")
 
 
 @app.on_event("shutdown")
 async def shutdown():
+    database.disconnect()
     console_log.info("Сервис остановлен")
 
 
