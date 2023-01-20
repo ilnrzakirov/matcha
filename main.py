@@ -24,12 +24,20 @@ fastapi_users = FastAPIUsers[User, int](
 
 @app.on_event("startup")
 async def startup():
+    """
+        Выполняется перед запуском сервиса
+    :return: None
+    """
     database.connect()
     console_log.info("Сервис запущен")
 
 
 @app.on_event("shutdown")
 async def shutdown():
+    """
+        Выполняется перед завершением сервиса
+    :return: None
+    """
     database.disconnect()
     console_log.info("Сервис остановлен")
 
