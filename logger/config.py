@@ -4,7 +4,7 @@ LOGGING_CONFIG = {
     "disable_existing_loggers": True,
     "formatters": {
         "console": {
-            "format": "%(asctime)s | %(levelname)s | %(module)s|%(lineno)s | %(message)s",
+            "format": "%(asctime)s | %(levelname)s | %(module)s | %(lineno)s | %(message)s",
         },
         "file": {
             "format": "%(asctime)s | [%(levelname)s] | %(name)s | %(module)s|%(lineno)s | %(message)s",
