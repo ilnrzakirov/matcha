@@ -52,7 +52,9 @@ class GenderChoices(types.TypeDecorator):
 
 
 class User(SQLAlchemyBaseUserTable[int], Base):
-
+    """
+        Custom class user FastApiUser
+    """
     id: int = Column(Integer, primary_key=True)
     email: EmailStr = Column(String, nullable=False)
     username: str = Column(String, nullable=False)
