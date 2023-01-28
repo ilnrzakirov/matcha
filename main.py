@@ -28,7 +28,7 @@ async def startup():
         Выполняется перед запуском сервиса
     :return: None
     """
-    database.connect()
+    await database.connect()
     console_log.info("Сервис запущен")
 
 
@@ -38,7 +38,7 @@ async def shutdown():
         Выполняется перед завершением сервиса
     :return: None
     """
-    database.disconnect()
+    await database.disconnect()
     console_log.info("Сервис остановлен")
 
 
