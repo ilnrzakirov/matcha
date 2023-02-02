@@ -4,6 +4,9 @@ from fastapi_users import schemas
 
 
 class UserRead(schemas.BaseUser[int]):
+    """
+        Класс юзера возврщ
+    """
     id: int
     email: str
     username: str
@@ -19,6 +22,9 @@ class UserRead(schemas.BaseUser[int]):
 
 
 class UserCreate(schemas.BaseUserCreate):
+    """
+        Класс юзера для создания
+    """
     username: str
     email: str
     password: str
@@ -31,6 +37,9 @@ class UserCreate(schemas.BaseUserCreate):
 
 
 class UserUpdate(schemas.BaseUserUpdate):
+    """
+        Класс юзера для обновления
+    """
     username: str
     email: str
     password: str
