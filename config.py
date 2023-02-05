@@ -26,6 +26,9 @@ class UserManager(BaseModel):
 
 
 class Configuration(BaseSettings):
+    """
+        Пайдантик класс для переменных окружения
+    """
     postgres: PostgresSettings
     uvicorn: UvicornSettings
     jwt: JWTSettings
